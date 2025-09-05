@@ -21,9 +21,10 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
+          let matchingLink = document.querySelector(`header nav a[href*="${id}"]`);
+          if (matchingLink) {
+              matchingLink.classList.add("active");
+          }
       });
     }
   });
@@ -37,20 +38,83 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-//scroll reveal usage
-ScrollReveal({ reset: true, distance: "80px", duration: 2000, delay: 200 });
-ScrollReveal().reveal(".home-content, .heading ", { origin: "top" });
-ScrollReveal().reveal(
-  ".home-img, .services-container, .portfolio-box, .contact form",
-  { origin: "bottom" }
-);
-ScrollReveal().reveal(".home-content h1, .about-img ", { origin: "left" });
+// Flip cards
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all flip cards
+    const flipCards = document.querySelectorAll('.flip-card');
 
-//typed js
-const typed = new Typed(".multiple-text", {
-  strings: ["Fullstack Developer", "Frontend Developer"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
+    // Add click event to all flip cards
+    flipCards.forEach(card => {
+        // Find the read more/less buttons inside this card
+        const readMoreBtn = card.querySelector('.read-more-btn');
+        const readLessBtn = card.querySelector('.read-less-btn');
+
+        // Toggle flip when clicking read more/less buttons
+        if (readMoreBtn) {
+            readMoreBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                card.classList.add('flipped');
+            });
+        }
+
+        if (readLessBtn) {
+            readLessBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                card.classList.remove('flipped');
+            });
+        }
+
+        // Also allow clicking anywhere on the card to flip it
+        card.addEventListener('click', function(e) {
+            if (!e.target.closest('button')) {
+                this.classList.toggle('flipped');
+            }
+        });
+    });
+
+    // Close card when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.flip-card')) {
+            flipCards.forEach(card => {
+                card.classList.remove('flipped');
+            });
+        }
+    });
+
+    // Add keyboard accessibility
+    flipCards.forEach(card => {
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && this.classList.contains('flipped')) {
+                this.classList.remove('flipped');
+            }
+        });
+    });
+
+    // Typed.js initialization
+    if (typeof Typed !== 'undefined') {
+        let typed = new Typed('.multiple-text', {
+            strings: ['Fullstack Developer', 'Frontend Developer', 'Backend Developer'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    }
+
+    // ScrollReveal initialization
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal({
+            reset: true,
+            distance: '80px',
+            duration: 2000,
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+        ScrollReveal().reveal('.home-img, .services-container, .projects-box, .contact form', { origin: 'bottom' });
+        ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+        ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+    }
 });
