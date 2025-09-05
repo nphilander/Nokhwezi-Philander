@@ -483,15 +483,19 @@ span {
 
 .contact form {
   max-width: 70rem;
-  margin: 1rem;
+  margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact form .input-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+    width: 100%;
 }
 
 .contact form .input-box input,
@@ -511,6 +515,7 @@ span {
 
 .contact form textarea {
   resize: none;
+    width: 100%;
 }
 
 .contact form .btn {
@@ -646,6 +651,14 @@ span {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .contact form {
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 617px){
