@@ -56,15 +56,39 @@
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Fullstack Developer</h3>
-        <p>Info about dev</p>
-        <a href="#" class="btn">Read More</a>
+        <p>Hey there! I'm a full-stack developer with a passion for turning caffeine into clean, efficient code. When I'm not busy making websites come to life, you can find me exploring new tech, contributing to open-source projects, or probably debugging why my code works on localhost but not in production (we've all been there, right?).</p>
+        
+        <p>I thrive on solving complex problems and building seamless digital experiences. My journey in tech started with a curiosity about how things work, and it's grown into a full-blown love affair with all things web development.</p>
+        
+        <div class="tech-stack">
+          <h4>My Tech Arsenal:</h4>
+          <div class="tech-category">
+            <span class="tech-label">Frontend:</span>
+            <span class="tech-tags">HTML5, CSS3, JavaScript, Typescript, React</span>
+          </div>
+          <div class="tech-category">
+            <span class="tech-label">Backend:</span>
+            <span class="tech-tags">Node.js, Express, Python</span>
+          </div>
+          <div class="tech-category">
+            <span class="tech-label">Databases:</span>
+            <span class="tech-tags">PostgresSQL, SQL, Supabase</span>
+          </div>
+          <div class="tech-category">
+            <span class="tech-label">Tools & More:</span>
+            <span class="tech-tags">Git, GitHub, REST APIs, Responsive Design</span>
+          </div>
+        </div>
+        
+        <p>When I'm not coding, I enjoy watching anime or exploring new hiking trails . I believe the best code is written with both logic and creativity, and I bring that balance to every project I work on.</p>
+        
+        <p>Let's build something amazing together!</p>
       </div>
     </section>
 
     <section class="services" id="services">
       <h2 class="heading">Services <span>I Offer</span></h2>
       <div class="services-container">
-        <!-- Card 1: Frontend -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <!-- Front of the Card -->
@@ -88,7 +112,6 @@
           </div>
         </div>
 
-        <!-- Card 2: Backend -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -110,7 +133,6 @@
           </div>
         </div>
 
-        <!-- Card 3: Full-Stack -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -155,43 +177,32 @@
             <a href="https://poem-generat0r.netlify.app/"><i class="bx bx-link"></i> </a>
           </div>
         </div>
-
-        <div class="projects-box">
-          <!-- add an image for my project -->
-          <img
-            src=""
-            alt="project"
-          />
-          <div class="projects-layer">
-            <h4>Web Design</h4>
-            <p>My web design project</p>
-            <a href="#"><i class="bx bx-link"></i> </a>
-          </div>
-        </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form action="mailto:nokhwezi13@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" />
+          <input type="text" name="subject" placeholder="Email Subject" required />
         </div>
         <textarea
-          name=""
-          id=""
+          name="message"
+          id="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
+          required
         ></textarea>
         <input type="submit" value="Send Message" class="btn" />
       </form>
+        <div id="statusMessage" class="status-message"></div>
     </section>
 
     <footer class="footer">
