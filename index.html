@@ -9,6 +9,17 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>PERSONAL PORTFOLIO</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "jQVnoOG0x-LRojgTS",
+        });
+      })();
+    </script>
   </head>
   <body>
     <header class="header">
@@ -40,7 +51,9 @@
           <a href=""><i class="bx bx-at"></i> </a>
           <a href=""><i class="bx bx-user-square"> </i></a>
         </div>
-        <a href="assets/Nokhwezi%20Bennedictor_resume.pdf" download class="btn">Download CV</a>
+        <a href="assets/Nokhwezi%20Bennedictor_resume.pdf" download class="btn"
+          >Download CV</a
+        >
       </div>
       <div class="home-img">
         <!-- add my portfolio image -->
@@ -50,21 +63,33 @@
 
     <section class="about" id="about">
       <div class="about-img">
-
         <img src="images/khwezi.jpg" alt="Nokhwezi" />
       </div>
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Fullstack Developer</h3>
-        <p>Konnichiwa! I'm a full-stack developer with a passion for turning caffeine into clean, efficient code. When I'm not busy making websites come to life, you can find me exploring new tech, stuck in a course, or probably debugging why my code works on localhost but not in production (we've all been there, right?).</p>
-        
-        <p>I thrive on solving complex problems and building seamless digital experiences. My journey in tech started with a curiosity about how things work, and it's grown into a full-blown love affair with all things web development.</p>
-        
+        <p>
+          Konnichiwa! I'm a full-stack developer with a passion for turning
+          caffeine into clean, efficient code. When I'm not busy making websites
+          come to life, you can find me exploring new tech, stuck in a course,
+          or probably debugging why my code works on localhost but not in
+          production (we've all been there, right?).
+        </p>
+
+        <p>
+          I thrive on solving complex problems and building seamless digital
+          experiences. My journey in tech started with a curiosity about how
+          things work, and it's grown into a full-blown love affair with all
+          things web development.
+        </p>
+
         <div class="tech-stack">
           <h4>My Tech Arsenal:</h4>
           <div class="tech-category">
             <span class="tech-label">Frontend:</span>
-            <span class="tech-tags">HTML5, CSS3, JavaScript, Typescript, React</span>
+            <span class="tech-tags"
+              >HTML5, CSS3, JavaScript, Typescript, React</span
+            >
           </div>
           <div class="tech-category">
             <span class="tech-label">Backend:</span>
@@ -76,12 +101,18 @@
           </div>
           <div class="tech-category">
             <span class="tech-label">Tools & More:</span>
-            <span class="tech-tags">Git, GitHub, REST APIs, Responsive Design</span>
+            <span class="tech-tags"
+              >Git, GitHub, REST APIs, Responsive Design</span
+            >
           </div>
         </div>
-        
-        <p>When I'm not coding, I enjoy watching anime or exploring new hiking trails . I believe the best code is written with both logic and creativity, and I bring that balance to every project I work on.</p>
-        
+
+        <p>
+          When I'm not coding, I enjoy watching anime or exploring new hiking
+          trails . I believe the best code is written with both logic and
+          creativity, and I bring that balance to every project I work on.
+        </p>
+
         <p>Let's build something amazing together!</p>
       </div>
     </section>
@@ -93,9 +124,11 @@
           <div class="flip-card-inner">
             <!-- Front of the Card -->
             <div class="flip-card-front">
-              <i class='bx bx-code-alt'></i>
+              <i class="bx bx-code-alt"></i>
               <h3>Frontend Development</h3>
-              <p>Creating the user-facing part of websites and web applications.</p>
+              <p>
+                Creating the user-facing part of websites and web applications.
+              </p>
               <button class="read-more-btn">Read More</button>
             </div>
             <!-- Back of the Card -->
@@ -115,7 +148,7 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <i class='bx bx-server'></i>
+              <i class="bx bx-server"></i>
               <h3>Backend Development</h3>
               <p>Building the server-side logic, databases, and APIs.</p>
               <button class="read-more-btn">Read More</button>
@@ -136,8 +169,8 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-                <i class='bx  bx-browser-activity'  ></i>
-                <h3>Full-Stack Solutions</h3>
+              <i class="bx bx-browser-activity"></i>
+              <h3>Full-Stack Solutions</h3>
               <p>End-to-end development from concept to deployment.</p>
               <button class="read-more-btn">Read More</button>
             </div>
@@ -165,7 +198,9 @@
           <div class="projects-layer">
             <h4>Precision Weather Dashboard Website</h4>
             <p>Climate Insight Website</p>
-            <a href="https://nokhwezi-weather-app.netlify.app/"><i class="bx bx-link"></i> </a>
+            <a href="https://nokhwezi-weather-app.netlify.app/"
+              ><i class="bx bx-link"></i>
+            </a>
           </div>
         </div>
 
@@ -174,7 +209,9 @@
           <div class="projects-layer">
             <h4>Poetic Interface Generator</h4>
             <p>French Poem Generator</p>
-            <a href="https://poem-generat0r.netlify.app/"><i class="bx bx-link"></i> </a>
+            <a href="https://poem-generat0r.netlify.app/"
+              ><i class="bx bx-link"></i>
+            </a>
           </div>
         </div>
 
@@ -183,7 +220,9 @@
           <div class="projects-layer">
             <h4>International World Clock</h4>
             <p>World Clock</p>
-            <a href="https://world-clocky.netlify.app/"><i class="bx bx-link"></i> </a>
+            <a href="https://world-clocky.netlify.app/"
+              ><i class="bx bx-link"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -192,14 +231,31 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="mailto:nokhwezi13@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+      <form id="contact-form" method="POST" onsubmit="validateForm(event)">
         <div class="input-box">
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
         </div>
         <div class="input-box">
-          <input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" />
-          <input type="text" name="subject" placeholder="Email Subject" required />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Email Subject"
+            required
+          />
         </div>
         <textarea
           name="message"
@@ -209,9 +265,11 @@
           placeholder="Your Message"
           required
         ></textarea>
+
         <input type="submit" value="Send Message" class="btn" />
       </form>
-        <div id="statusMessage" class="status-message"></div>
+
+      <div id="statusMessage" class="status-message"></div>
     </section>
 
     <footer class="footer">
