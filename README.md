@@ -24,6 +24,7 @@ A clean, modern, and responsive portfolio website built with pure **HTML**, **CS
 
 *   **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 *   **Deployment:** [Netlify](https://www.netlify.com/)
+*   **Icons:** [Boxicons](https://boxicons.com/)
 *   **Fonts:** [Google Fonts](https://fonts.google.com/)
 
 ## 🛠️ Setup & Installation
