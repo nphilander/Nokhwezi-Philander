@@ -1,11 +1,34 @@
-//toggle icon navbar
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+// Toggle mobile menu
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const header = document.querySelector("header");
 
-menuIcon.onclick = () => {
+// Toggle menu on menu icon click
+menuIcon.onclick = (e) => {
+  e.stopPropagation(); // Prevent event from bubbling to document
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
+  // Toggle overflow on body when menu is open
+  document.body.style.overflow = navbar.classList.contains("active") ? "hidden" : "";
 };
+
+// Close menu when clicking outside
+window.addEventListener('click', (e) => {
+  if (navbar.classList.contains('active') && !e.target.closest('.navbar') && e.target !== menuIcon) {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+    document.body.style.overflow = '';
+  }
+});
+
+// Close menu when clicking on a nav link
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+    document.body.style.overflow = '';
+  });
+});
 
 // scroll sections active link
 let sections = document.querySelectorAll("section");
